@@ -2,25 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
+        stage('Hello') {
             steps {
-                echo 'Cloning repository...'
-                git 'https://github.com/singhharsh-gif/tis.git'
+                echo 'Hello! Jenkins is working 🚀'
             }
         }
 
-        stage('Build') {
+        stage('Second Step') {
             steps {
-                echo 'Building project...'
-                // Example for Java
-                sh 'mvn clean install'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                sh 'mvn test'
+                echo 'This runs every time pipeline triggers'
             }
         }
     }
